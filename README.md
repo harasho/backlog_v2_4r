@@ -1,8 +1,7 @@
 # BacklogV24r
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/backlog_v2_4r`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+[Backlog](http://www.backlog.jp/) is an issue tracking SaaS.
+This gem accesses with api based on [Backlog API Document](http://developer.nulab-inc.com/ja/docs/backlog).
 
 ## Installation
 
@@ -22,7 +21,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+You have got to have backlogs api key
+
+backlog_api = BacklogApi.new(api_key: api_key_xxxxxxxxxxxx)
+
+I recommend you use environment variables as follows
+
+backlog_api = BacklogApi.new(api_key: ENV["API_KEY"])
+
+# get projects
+backlog_api.projects
+
+# get spage
+backlog_api.space
+
+# search issues
+backlog_api.issues({ "projectId[]" => project_id, "count" => 10 })
+
+backlog_api.issues(params)
+
+#  note: params based on [Backlog API Document](http://developer.nulab-inc.com/ja/docs/backlog)
+
+```
 
 ## Development
 

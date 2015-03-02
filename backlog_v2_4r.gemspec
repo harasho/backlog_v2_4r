@@ -6,16 +6,12 @@ require 'backlog_v2_4r/version'
 Gem::Specification.new do |spec|
   spec.name          = "backlog_v2_4r"
   spec.version       = BacklogV24r::VERSION
-  spec.authors       = ["Yusuke KON"]
+  spec.authors       = ["Yusuke KON @kon_yu"]
   spec.email         = ["yusukedrive@gmail.com"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
-
   spec.summary       = %q{Get Backlog(powerd by nulab) data}
-  spec.description   = %q{}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = %q{Backlog is an d issue traking service. Backlog has web Api. it can use api_key, This gem can get Backlog's data with that api.}
+  spec.homepage      = "https://github.com/konyu/backlog_v2_4r.rb"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
