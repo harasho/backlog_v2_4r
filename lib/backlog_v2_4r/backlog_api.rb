@@ -23,16 +23,23 @@ class BacklogApi
   end
 
   def issues(params)
-    params
     data = @hc.get_content(build_html(method: "issues"), params)
     JSON.parse(data)
   end
 
+  def versions(project_id_or_key)
+    data = @hc.get_content(build_html_with_action(method: "projects", arg: project_id_or_key, action: "versions"))
+    JSON.parse(data)
+  end
 
   private
 
   def build_html(method: nil)
     BACKLOG_URL + method + "?apiKey=" + @api_key
+  end
+
+  def build_html_with_action(method: nil, arg: nil, action: nil)
+    BACKLOG_URL + method + "/" + arg + "/" + action + "?apiKey=" + @api_key
   end
 
 end
