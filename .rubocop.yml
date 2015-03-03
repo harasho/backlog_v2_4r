@@ -1,0 +1,14 @@
+#require: rubocop-rspec
+
+# 最大行数は120まで拡張
+Metrics/LineLength:
+  Max: 120
+
+# コメント文にasciiコード以外(日本語も)OKとする
+# disable to check whether only ascii symbols in comments.
+AsciiComments:
+  Enabled: false
+
+# 文字列の基本はダブルクウォートにする
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

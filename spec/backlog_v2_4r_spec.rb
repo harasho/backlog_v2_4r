@@ -45,7 +45,6 @@ describe BacklogV24r do
       end
       subject { ba.issues(params2) }
       it "get projects data" do
-        p subject
         expect(subject[0].key?("id")).to be_truthy
         expect(subject[0].key?("issueKey")).to be_truthy
       end

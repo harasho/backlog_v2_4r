@@ -6,9 +6,6 @@ gemspec
 group :test do
   gem 'rspec'
   gem "pry-byebug"
-
-  #gem 'activesupport'
-  #gem 'coveralls', :require => false
 end
 
 gem "httpclient"
