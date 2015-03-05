@@ -7,5 +7,3 @@ group :test do
   gem 'rspec'
   gem "pry-byebug"
 end
-
-gem "httpclient"
